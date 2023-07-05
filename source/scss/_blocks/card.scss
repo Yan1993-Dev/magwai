@@ -1,7 +1,10 @@
 
 .card {
     margin-top: 230px;
-    padding: 0 20px;
+    padding: 0;
+    @media (max-width: 1770px) {
+        padding: 0 20px;
+    }
     &__title {
         @include title;
     }

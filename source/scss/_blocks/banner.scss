@@ -50,5 +50,8 @@
             transform: skew(17deg);
             background-image: url('../img/slash.svg');
         }
+        @media (max-width: 400px) {
+            padding: 21px 44px;
+        }
     }
 }

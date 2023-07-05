@@ -17,7 +17,7 @@ const loadMore = async () => {
                 <div class="card__list-inner">
                 <h3 class="card__list-title">${content[key].title}</h3>
                 <p class="card__list-body">${content[key].body}</p>
-                <a href="#" class="card__list-link">Continue reading</a>
+                <a href="#" class="card__list-link" aria-label="прочитать больше">Continue reading</a>
                 </div>
             </li>
             `

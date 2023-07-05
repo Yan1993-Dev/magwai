@@ -64,6 +64,9 @@
         right: 25px;
         background: none;
         color: #FFFFFF;
+        @media (max-width: 600px) {
+            top: 12px;
+        }
     }
 
     &__btn {
@@ -101,4 +104,9 @@
     opacity: 1;
     transition: all .4s;
     transform: translateX(0);
+    @media (max-width: 1350px) {
+        height: auto;
+        background: #131313;
+        padding-bottom: 100%;
+    }
 }

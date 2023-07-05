@@ -1,0 +1,182 @@
+.header {
+    position: relative;
+    display: flex;
+    z-index: 50;
+
+    &__list {
+        display: flex;
+        align-items: center;
+        column-gap: 42px;
+        padding: 28px 0;
+
+        @media (max-width: 1600px) {
+            column-gap: 20px;
+        }
+
+        @media (max-width: 1450px) {
+            column-gap: 10px;
+        }
+
+        @media (max-width: 1350px) {
+            display: none;
+        }
+
+        &--mobile {
+            display: none;
+
+            @media (max-width: 1350px) {
+                display: flex;
+                align-items: center;
+                padding: 30px 0 20px 0;
+                width: 100%;
+            }
+        }
+
+        &--right {
+            display: none;
+
+            @media (max-width: 1350px) {
+                display: flex;
+            }
+
+            @media (max-width: 853px) {
+                display: none;
+            }
+        }
+
+        &--mleft {
+            margin-right: auto;
+        }
+
+        &--main {
+            margin-right: auto;
+        }
+
+        &-item {
+            &--logo {
+                padding-right: 36px;
+            }
+
+            &--right {
+                margin-left: 90px;
+
+                @media (max-width: 853px) {
+                    margin-left: auto;
+                }
+            }
+        }
+
+        &-link {
+            color: #FFF;
+            text-align: right;
+            font-size: 14px;
+            font-family: 'Montserrat', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 150%;
+        }
+
+        &-btn {
+            position: relative;
+            padding: 19px 76px;
+            transform: skew(-18deg);
+            max-width: max-content;
+            background-color: #C2AB81;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 24px;
+                height: 60px;
+                top: -1px;
+                right: -20px;
+                transform: skew(17deg);
+                background-image: url('../img/slash.svg');
+            }
+
+            &--mobile {
+                display: none;
+                background: none;
+                width: 30px;
+                height: 30px;
+
+                @media (max-width: 1350px) {
+                    display: block;
+                    background-image: url('../img/burger.svg');
+                    outline: none;
+                    border: none;
+                }
+            }
+        }
+
+        &-text {
+            transform: skew(18deg);
+            color: #FFF;
+            text-align: right;
+            font-size: 12px;
+            font-family: 'Montserrat', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 150%;
+        }
+    }
+}
+
+
+
+.burger {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    background: #131313;
+    padding-left: 50px;
+    z-index: 40;
+    transform: translateX(-1000px);
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        row-gap: 15px;
+
+        &-link {
+            text-align: right;
+            font-size: 36px;
+            font-family: 'Montserrat', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 150%;
+            color: #000000;
+            -webkit-text-stroke: 1px #FFFFFF;
+            text-stroke: 1px #FFFFFF;
+
+            @media (max-width: 480px) {
+                font-size: 20px;
+            }
+        }
+
+        &-item {
+            &--hidden {
+                display: none;
+
+                @media (max-width: 853px) {
+                    display: block;
+                }
+            }
+        }
+
+        &-btn {
+            &--m {
+                @media (max-width: 480px) {
+                    padding: 19px 48px;
+                }
+            }
+        }
+    }
+}
+
+.open {
+    opacity: 1;
+    transition: all .4s;
+    transform: translateX(0);
+}
